@@ -5,7 +5,10 @@ import requests
 
 def plus_one(payload):
     """Adds one to the input integer."""
-    return str(int(payload) + 1)
+    try:
+        return str(int(payload) + 1)
+    except ValueError:
+        return "Invalid input."
 
 
 def sort(payload):
