@@ -49,5 +49,24 @@ class ToUpperTests(unittest.TestCase):
         self.assertEqual(to_upper(""), "")
 
 
+class FibonacciTests(unittest.TestCase):
+    def test_null(self):
+        self.assertEqual(fibonacci(""), "Invalid input.")
+
+    def test_0(self):
+        self.assertEqual(fibonacci("0"), "0")
+
+    def test_1(self):
+        self.assertEqual(fibonacci("1"), "1")
+
+    def test_2(self):
+        self.assertEqual(fibonacci("2"), "1")
+
+    def test_7(self):
+        self.assertEqual(fibonacci("7"), "13")
+
+    def test_20(self):
+        self.assertEqual(fibonacci("20"), "6765")
+
 if __name__ == "__main__":
     unittest.main()
